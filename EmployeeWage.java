@@ -6,29 +6,29 @@ public class EmployeeWage {
 
 		System.out.println("Welcome to Employee Wage Computation Program");
 
-		int WAGE_HOURS = 20;
+		int empHr;
 
-		int DAILY_HOURS = 8;
+		int empCheck = (int) (Math.floor(Math.random() * 10) % 3);
 
-		int DAILY_EMP_WAGE;
+		System.out.println("Random Integers: " + empCheck);
 
-		int PART_TIME_HOURS = 4;
+		switch (empCheck) {
+		case 1:
+			empHr = 8;
+			System.out.print("full time");
+			break;
+		case 2:
+			empHr = 4;
+			System.out.print("part time");
+			break;
+		case 0:
+			empHr = 0;
+			System.out.println("absent");
+			break;
 
-		int PART_TIME_HOURSS = WAGE_HOURS * PART_TIME_HOURS;
-		int FULL_TIME_HOURS = WAGE_HOURS * DAILY_HOURS;
-
-		double empCheck = Math.floor(Math.random() * 10) % 2;
-
-		System.out.println(empCheck);
-
-		if (empCheck == 1) {
-
-			System.out.println("Employee is part time: " + FULL_TIME_HOURS);
-
-		}
-
-		else {
-			System.out.println("Employee is full time :" + PART_TIME_HOURSS);
+		default:
+			empHr = 0;
+			break;
 		}
 
 	}
